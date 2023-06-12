@@ -37,7 +37,15 @@ function Banner() {
           {movie?.title || movie.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
+          <a
+            href={`https://www.netflix.com/search?q=${
+              movie?.title || movie.name || movie?.original_name
+            }`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="banner__button">Play</button>
+          </a>
           <button className="banner__button">My List</button>
         </div>
         <p className="banner__desc">{truncate(`${movie?.overview}`, 150)}</p>
