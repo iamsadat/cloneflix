@@ -2,8 +2,6 @@
 
 A Netflix clone built with React and powered by the TheMovieDB API.
 
-![Netflix Clone Screenshot](screenshot.png)
-
 ## Features
 
 - Browse and search for movies and TV shows from the extensive TheMovieDB database.
