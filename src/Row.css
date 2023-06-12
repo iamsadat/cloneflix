@@ -18,14 +18,15 @@
   max-height: 100px;
   object-fit: contain;
   margin-right: 10px;
-  width: 100%;
+  width: auto;
   transition: transform 450ms;
+  cursor: pointer;
 }
 
-.row__poster:hover {
+.row__poster:hover,
+.row__poster:focus {
   transform: scale(1.08);
   opacity: 1;
-  cursor: pointer;
 }
 
 .row__posterLarge {
@@ -33,9 +34,9 @@
   margin: 0 8px;
 }
 
-.row__posterLarge:hover {
+.row__posterLarge:hover,
+.row__posterLarge:focus {
   transform: scale(1.09);
-  cursor: pointer;
 }
 
 .row__details:hover {
@@ -55,4 +56,8 @@
 
 .movie__details:hover {
   opacity: 1;
+}
+
+.row__posters > a {
+  display: inline-block;
 }

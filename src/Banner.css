@@ -48,3 +48,7 @@
   background-color: #e6e6e6;
   transition: all 0.5s;
 }
+
+.banner__desc {
+  margin-top: 8px;
+}

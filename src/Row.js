@@ -27,16 +27,24 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       <h2>{title}</h2>
       <div className="row__posters">
         {movies.map((movie) => (
-          <img
-            className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`}
-            key={movie.id}
-            src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
+          <a
+            href={`https://www.netflix.com/search?q=${
+              movie?.title || movie.name || movie?.original_name
             }`}
-            alt={movie.name}
-            onMouseOver={() => setHoveredMovie(movie)}
-            onMouseOut={() => setHoveredMovie(null)}
-          />
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`}
+              key={movie.id}
+              src={`${base_url}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
+              alt={movie.name}
+              onMouseOver={() => setHoveredMovie(movie)}
+              onMouseOut={() => setHoveredMovie(null)}
+            />
+          </a>
         ))}
       </div>
       <div className="row__details">
