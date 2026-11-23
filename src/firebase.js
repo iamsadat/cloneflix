@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDm1MYHTYl14YfiOc7HRMXytADC4CrG_rk",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "cloneflix-21c93.firebaseapp.com",
   projectId: "cloneflix-21c93",
   storageBucket: "cloneflix-21c93.appspot.com",
